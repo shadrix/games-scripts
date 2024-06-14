@@ -167,12 +167,64 @@ try {
     pauseButton.onclick = toggleGamePause;
     document.body.appendChild(pauseButton);
 
-    // Delay console.log statement by 5 seconds
-    setTimeout(() => {
-        console.log("1");
-        var element = document.querySelector("#app > div.index-page.page > div > div.pages-index-drop.drop-zone > div > a");
-        element.click();
-    }, 5000);
+    // Function to wait for the element and click it
+    function waitForElementAndClick(selector, interval = 1000, maxAttempts = 10) {
+        return new Promise((resolve, reject) => {
+            let attempts = 0;
+            const checkExist = setInterval(() => {
+                const element = document.querySelector(selector);
+                if (element) {
+                    element.click();
+                    clearInterval(checkExist);
+                    resolve(true);
+                } else {
+                    attempts++;
+                    if (attempts >= maxAttempts) {
+                        clearInterval(checkExist);
+                        resolve(false);
+                    }
+                }
+            }, interval);
+        });
+    }
+
+    // Selectors for the elements
+    const firstSelector = "#app > div > div > div.pages-daily-reward-reward > div.footer > div.continue-button-wrapper > button";
+    const secondSelector = "#app > div.index-page.page > div > div.farming-buttons-wrapper > div > button";
+
+    // Function to perform the second task 3 times
+    async function performSecondTask() {
+        for (let i = 0; i < 3; i++) {
+            try {
+                await waitForElementAndClick(secondSelector);
+                console.log(`Task ${i + 1} completed`);
+            } catch (error) {
+                console.error(`Task ${i + 1} failed:`, error);
+                break;
+            }
+        }
+    }
+
+    // Function to perform the entire sequence of tasks
+    async function performAllTasks() {
+        try {
+            // Wait for the first element and click it once, or proceed if it doesn't appear
+            const firstTaskCompleted = await waitForElementAndClick(firstSelector);
+            if (firstTaskCompleted) {
+                console.log('First task completed');
+            } else {
+                console.log('First element did not appear, proceeding with second task');
+            }
+
+            // Perform the second task 3 times
+            await performSecondTask();
+        } catch (error) {
+            console.error('An error occurred:', error);
+        }
+    }
+
+    // Start the tasks
+    performAllTasks();
 
     function toggleGamePause() {
         isGamePaused = !isGamePaused;
