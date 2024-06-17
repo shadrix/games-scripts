@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Pixel
+// @name         pixel
 // @version      1.0
 // @namespace    Violentmonkey Scripts
 // @author       shadrix
