@@ -1,4 +1,15 @@
-
+// ==UserScript==
+// @name         Pixel
+// @version      1.0
+// @namespace    Violentmonkey Scripts
+// @author       shadrix
+// @match        https://sexyzbot.pxlvrs.io/*
+// @grant        none
+// @downloadURL  https://raw.githubusercontent.com/shadrix/games-scripts/main/poket-rocket.js
+// @updateURL    https://raw.githubusercontent.com/shadrix/games-scripts/main/poket-rocket.js
+// @homepage     https://github.com/shadrix/games-scripts
+// ==/UserScript==
+// Function to navigate to the new URL if the current URL is not the target URL
 
 function clickElementBySelector(selector, callback) {
     var element = document.querySelector(selector);
