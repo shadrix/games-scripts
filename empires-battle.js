@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Blum
+// @name         empires-battle
 // @version      1.0
 // @namespace    Violentmonkey Scripts
 // @author       shadrix
