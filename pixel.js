@@ -71,7 +71,7 @@ function startProcess() {
 													          setTimeout(function() {
 			        clickElementBySelector("#root > div > div > nav > a:nth-child(3)", function() {
 				          setTimeout(function() {
-						        clickElementBySelector("#root > div > div > div:nth-child(1) > div > div > div.swiper.swiper-initialized.swiper-horizontal.swiper-android._swiper_1ymop_1.pet-swiper.swiper-backface-hidden > div.swiper-wrapper._swiperWrapper_1ymop_8 > div.swiper-slide.swiper-slide-active > div > div:nth-child(3) > button", function() {
+						        clickElementBySelector("#root > div > div > div:nth-child(1) > div > div > div.swiper.swiper-initialized.swiper-horizontal.swiper-android._swiper_1ymop_1.pet-swiper > div.swiper-wrapper._swiperWrapper_1ymop_8 > div.swiper-slide.swiper-slide-active > div > div:nth-child(3) > button", function() {
 							          setTimeout(function() {
 									        clickElementBySelector("body > div._wrapper_ydsve_1.font-rubik.undefined.MuiModal-root.css-8ndowl > div._modalContainer_ydsve_4._show_ydsve_20.false > div._footerCard_ydsve_154 > button", function() {
 										          setTimeout(function() {
