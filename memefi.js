@@ -5,9 +5,8 @@
 // @author       shadrix
 // @match        https://tg-app.memefi.club/*
 // @grant        none
-// @icon         https://cdn.prod.website-files.com/65b6a1a4a0e2af577bccce96/65ba99c1616e21b24009b86c_blum-256.png
-// @downloadURL  https://raw.githubusercontent.com/shadrix/games-scripts/main/blum.js
-// @updateURL    https://raw.githubusercontent.com/shadrix/games-scripts/main/blum.js
+// @downloadURL  https://raw.githubusercontent.com/shadrix/games-scripts/main/memefi.js
+// @updateURL    https://raw.githubusercontent.com/shadrix/games-scripts/main/memefi.js
 // @homepage     https://github.com/shadrix/games-scripts
 // ==/UserScript==
 // Function to navigate to the new URL if the current URL is not the target URL
