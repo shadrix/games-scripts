@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Pixel
+// @name         pocket rocket
 // @version      1.0
 // @namespace    Violentmonkey Scripts
 // @author       shadrix
