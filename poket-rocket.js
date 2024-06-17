@@ -1,16 +1,3 @@
-// ==UserScript==
-// @name         Pocket Rocket
-// @version      1.0
-// @namespace    Violentmonkey Scripts
-// @author       shadrix
-// @match        https://rocketf.whitechain.io/*
-// @grant        none
-// @downloadURL  https://raw.githubusercontent.com/shadrix/games-scripts/main/poket-rocket.js
-// @updateURL    https://raw.githubusercontent.com/shadrix/games-scripts/main/poket-rocket.js
-// @homepage     https://github.com/shadrix/games-scripts
-// ==/UserScript==
-
-
 
 
 function clickElementBySelector(selector, callback) {
