@@ -3,7 +3,7 @@
 // @version      1.0
 // @namespace    Violentmonkey Scripts
 // @author       shadrix
-// @match        https://sexyzbot.pxlvrs.io/*
+// @match        https://rocketf.whitechain.io/*
 // @grant        none
 // @downloadURL  https://raw.githubusercontent.com/shadrix/games-scripts/main/poket-rocket.js
 // @updateURL    https://raw.githubusercontent.com/shadrix/games-scripts/main/poket-rocket.js
