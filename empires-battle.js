@@ -3,7 +3,7 @@
 // @version      1.0
 // @namespace    Violentmonkey Scripts
 // @author       shadrix
-// @match        https://app.empiresbattle.com/*
+// @match        https://app4.empiresbattle.com/*
 // @grant        none
 // @downloadURL  https://raw.githubusercontent.com/shadrix/games-scripts/main/empires-battle.js
 // @updateURL    https://raw.githubusercontent.com/shadrix/games-scripts/main/empires-battle.js
