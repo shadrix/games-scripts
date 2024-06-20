@@ -123,6 +123,7 @@ try {
             minDelayMs: 2000,
             maxDelayMs: 5000,
         };
+
     }
 
     function getRandomDelay() {
@@ -167,6 +168,11 @@ try {
     pauseButton.onclick = toggleGamePause;
     document.body.appendChild(pauseButton);
 
+    function toggleGamePause() {
+        isGamePaused = !isGamePaused;
+        pauseButton.textContent = isGamePaused ? 'Resume' : 'Pause';
+    }
+
     // Function to wait for the element and click it
     function waitForElementAndClick(selector, interval = 1000, maxAttempts = 10) {
         return new Promise((resolve, reject) => {
@@ -191,6 +197,62 @@ try {
     // Selectors for the elements
     const firstSelector = "#app > div > div > div.pages-daily-reward-reward > div.footer > div.continue-button-wrapper > button";
     const secondSelector = "#app > div.index-page.page > div > div.farming-buttons-wrapper > div > button";
+    const thiedSelector = "#app > div.layout-tabs.tabs > a:nth-child(3)";
+    const fouthSelector = "#app > div.frens-page.page > div > div.pages-frens-list-heading.list-heading > div.claim-zone > button";
+    const fifthSelector = "#app > div.layout-tabs.tabs > a:nth-child(1)";
+    const sixthSelector = "#app > div.index-page.page > div > div.pages-index-drop.drop-zone > div > a";
+
+    // Function to perform the second task 3 times
+    async function performsixhhTask() {
+        for (let i = 0; i < 3; i++) {
+            try {
+                await waitForElementAndClick(sixthSelector);
+                console.log(`Task ${i + 1} completed`);
+            } catch (error) {
+                console.error(`Task ${i + 1} failed:`, error);
+                break;
+            }
+        }
+    }
+    
+    // Function to perform the second task 3 times
+    async function performfifthhTask() {
+        for (let i = 0; i < 3; i++) {
+            try {
+                await waitForElementAndClick(fifthSelector);
+                console.log(`Task ${i + 1} completed`);
+            } catch (error) {
+                console.error(`Task ${i + 1} failed:`, error);
+                break;
+            }
+        }
+    }
+    
+    // Function to perform the second task 3 times
+    async function performfouthTask() {
+        for (let i = 0; i < 3; i++) {
+            try {
+                await waitForElementAndClick(fouthSelector);
+                console.log(`Task ${i + 1} completed`);
+            } catch (error) {
+                console.error(`Task ${i + 1} failed:`, error);
+                break;
+            }
+        }
+    }
+    
+    // Function to perform the second task 3 times
+    async function performThiedTask() {
+        for (let i = 0; i < 3; i++) {
+            try {
+                await waitForElementAndClick(thiedSelector);
+                console.log(`Task ${i + 1} completed`);
+            } catch (error) {
+                console.error(`Task ${i + 1} failed:`, error);
+                break;
+            }
+        }
+    }
 
     // Function to perform the second task 3 times
     async function performSecondTask() {
@@ -218,6 +280,10 @@ try {
 
             // Perform the second task 3 times
             await performSecondTask();
+            await performThiedTask();
+            await performfouthTask();
+            await performfifthhTask();
+            await performsixhhTask();
         } catch (error) {
             console.error('An error occurred:', error);
         }
@@ -225,11 +291,6 @@ try {
 
     // Start the tasks
     performAllTasks();
-
-    function toggleGamePause() {
-        isGamePaused = !isGamePaused;
-        pauseButton.textContent = isGamePaused ? 'Resume' : 'Pause';
-    }
 } catch (e) {
     console.log('Failed to initiate the game script');
 }
