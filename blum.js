@@ -154,19 +154,6 @@ try {
     }
 
     const pauseButton = document.createElement('button');
-    pauseButton.textContent = 'Pause';
-    pauseButton.style.position = 'fixed';
-    pauseButton.style.bottom = '20px';
-    pauseButton.style.right = '20px';
-    pauseButton.style.zIndex = '9999';
-    pauseButton.style.padding = '4px 8px';
-    pauseButton.style.backgroundColor = '#5d5abd';
-    pauseButton.style.color = 'white';
-    pauseButton.style.border = 'none';
-    pauseButton.style.borderRadius = '10px';
-    pauseButton.style.cursor = 'pointer';
-    pauseButton.onclick = toggleGamePause;
-    document.body.appendChild(pauseButton);
 
     function toggleGamePause() {
         isGamePaused = !isGamePaused;
