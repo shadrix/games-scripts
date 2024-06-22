@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         pocket rocket
-// @version      1.3
+// @version      1.4
 // @namespace    Violentmonkey Scripts
 // @description  Automation script for navigating a website
 // @match        https://rocketf.whitechain.io/*
@@ -199,7 +199,7 @@ function startProcess() {
     });
 	
 
-      clickElementBySelector("#root > div > div > a", function() {
+	clickElementBySelector("#root > div > div > a", function() {
 	setTimeout(function() {
 	      clickElementBySelector("#root > div > div.relative.h-12.w-full.grow.border-t.border-\\[\\#0A4E7B\\].bg-\\[\\#0D0D15\\] > button", function() {
 		      setTimeout(function() {
@@ -208,14 +208,11 @@ function startProcess() {
 	      });
 	  }, 500);  
       });
-    clickElementBySelector("#root > div > div > div.pointer-events-auto.flex.items-center.justify-around.absolute.bottom-0.left-0.w-full.border-t.border-border.bg-black.pb-5.pt-3.backdrop-blur-sm.supports-\\[backdrop-filter\\]\\:bg-black\\/50 > a:nth-child(1)", function() {
-        executeSequenceWithRepetition();
-    });
+	setTimeout(function() {
+	      clickElementBySelector("#root > div > div > div.pointer-events-auto.flex.items-center.justify-around.absolute.bottom-0.left-0.w-full.border-t.border-border.bg-black.pb-5.pt-3.backdrop-blur-sm.supports-\\[backdrop-filter\\]\\:bg-black\\/50 > a:nth-child(1)", function() {
+			        executeSequenceWithRepetition();
+			    });
+	  }, 3000); 
+   
 }
-
-// Wait for the specified element and then start the process
-waitForElementAndStartProcess("#root > div > div > div.pointer-events-auto.flex.items-center.justify-around.absolute.bottom-0.left-0.w-full.border-t.border-border.bg-black.pb-5.pt-3.backdrop-blur-sm.supports-\\[backdrop-filter\\]\\:bg-black\\/50 > a:nth-child(1)", startProcess);
-
-
-// Wait for the specified element and then start the process
-waitForElementAndStartProcess("#root > div > div > div.pointer-events-auto.flex.items-center.justify-around.absolute.bottom-0.left-0.w-full.border-t.border-border.bg-black.pb-5.pt-3.backdrop-blur-sm.supports-\\[backdrop-filter\\]\\:bg-black\\/50 > a:nth-child(1)", startProcess);
+startProcess();
