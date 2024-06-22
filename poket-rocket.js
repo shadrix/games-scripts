@@ -31,8 +31,7 @@ function clickElementBySelector(selector, callback) {
 function performClickSequence(callback) {
     setTimeout(function() {
         clickElementBySelector("#root > div > div > div.pointer-events-auto.flex.items-center.justify-around.absolute.bottom-0.left-0.w-full.border-t.border-border.bg-black.pb-5.pt-3.backdrop-blur-sm.supports-\\[backdrop-filter\\]\\:bg-black\\/50 > a:nth-child(1)", function() {
-        	
-        	setTimeout(function() {
+		setTimeout(function() {
               clickElementBySelector("#root > div > div.px-4 > div.mx-auto.space-y-4 > div:nth-child(1) > div.relative.z-10.flex.items-center.justify-between.gap-2 > button", function() {
               });
           }, 500);
