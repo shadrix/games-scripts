@@ -10,20 +10,46 @@
 // @homepage     https://github.com/shadrix/games-scripts
 // ==/UserScript==
 
+function simulateClick(element, offsetX = 0, offsetY = 0) {
+    const rect = element.getBoundingClientRect();
+    const clientX = rect.left + rect.width / 2 + offsetX;
+    const clientY = rect.top + rect.height / 2 + offsetY;
 
+    const events = ['pointerdown', 'mousedown', 'pointerup', 'mouseup', 'click'];
 
-function clickElementBySelector(selector, callback) {
+    events.forEach(eventType => {
+        const event = new MouseEvent(eventType, {
+            bubbles: true,
+            cancelable: true,
+            view: window,
+            clientX,
+            clientY,
+            screenX: clientX,
+            screenY: clientY,
+            pageX: clientX,
+            pageY: clientY,
+            button: 0,
+            buttons: 1,
+            pointerId: 1,
+            pointerType: 'touch',
+            isPrimary: true,
+        });
+
+        element.dispatchEvent(event);
+    });
+}
+
+function clickElementBySelector(selector, callback, offsetX = 0, offsetY = 0) {
     var element = document.querySelector(selector);
     if (element) {
-        console.log("Clicking element:", selector);
-        element.click();
+        simulateClick(element, offsetX, offsetY);
         if (callback) {
             callback();
         }
     } else {
         console.log("Element not found for the provided selector:", selector);
         setTimeout(function() {
-            clickElementBySelector(selector, callback);
+            clickElementBySelector(selector, callback, offsetX, offsetY);
         }, 1000); // Retry after 1 second
     }
 }
