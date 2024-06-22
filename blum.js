@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Blum
-// @version      1.0
+// @version      1.1
 // @namespace    Violentmonkey Scripts
 // @author       shadrix
 // @match        https://telegram.blum.codes/*
@@ -161,7 +161,7 @@ try {
     }
 
     // Function to wait for the element and click it
-    function waitForElementAndClick(selector, interval = 1000, maxAttempts = 10) {
+    function waitForElementAndClick(selector, interval = 1000, maxAttempts = 3) {
         return new Promise((resolve, reject) => {
             let attempts = 0;
             const checkExist = setInterval(() => {
