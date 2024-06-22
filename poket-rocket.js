@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         pocket rocket
-// @version      1.1
+// @version      1.2
 // @namespace    Violentmonkey Scripts
 // @description  Automation script for navigating a website
 // @match        https://rocketf.whitechain.io/*
@@ -68,25 +68,7 @@ function performClickSequence(callback) {
               });
           }, 500);
           
-          
-          setTimeout(function() {
-              clickElementBySelector("#root > div > div.px-4 > button > img", function() {
-              	setTimeout(function() {
-			              clickElementBySelector("#radix-\\:ra\\: > div.flex.flex-col.items-center.justify-center.p-4.pb-12.text-center > button", function() {
-			              	
-			              	setTimeout(function() {
-						              clickElementBySelector("#root > div > div.relative.h-12.w-full.grow.border-t.border-\\[\\#0A4E7B\\].bg-\\[\\#0D0D15\\] > button", function() {
-						              	setTimeout(function() {
-									              clickElementBySelector("#radix-\\:ru\\: > button", function() {
-									              });
-									          }, 500); 
-						              });
-						          }, 500);  
-						            
-			              });
-			          }, 500);  
-              });
-          }, 500);   
+		
             setTimeout(function() {
                 clickElementBySelector("#root > div > div.px-4 > div.pointer-events-auto.grid.h-\\[52px\\].grid-cols-2.items-center.gap-2.mb-6 > button:nth-child(1)", function() {
                     setTimeout(function() {
@@ -190,6 +172,17 @@ function startProcess() {
             });
         }, 500);
     });
+	
+
+      clickElementBySelector("#root > div > div > a", function() {
+	setTimeout(function() {
+	      clickElementBySelector("#root > div > div.relative.h-12.w-full.grow.border-t.border-\\[\\#0A4E7B\\].bg-\\[\\#0D0D15\\] > button", function() {
+		      setTimeout(function() {
+			       window.location.href = "https://rocketf.whitechain.io/";
+				    }, 2000);
+	      });
+	  }, 500);  
+      });
     clickElementBySelector("#root > div > div > div.pointer-events-auto.flex.items-center.justify-around.absolute.bottom-0.left-0.w-full.border-t.border-border.bg-black.pb-5.pt-3.backdrop-blur-sm.supports-\\[backdrop-filter\\]\\:bg-black\\/50 > a:nth-child(1)", function() {
         executeSequenceWithRepetition();
     });
