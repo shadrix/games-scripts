@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         pocket rocket
-// @version      1.2
+// @version      1.3
 // @namespace    Violentmonkey Scripts
 // @description  Automation script for navigating a website
 // @match        https://rocketf.whitechain.io/*
