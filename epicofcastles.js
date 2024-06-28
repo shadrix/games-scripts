@@ -1,4 +1,3 @@
-
 // ==UserScript==
 // @name         Epic of castles
 // @version      1.1
