@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Bump
-// @version      1.1
+// @version      1.3
 // @namespace    Violentmonkey Scripts
 // @author       shadrix
 // @match        https://mmbump.pro/*
