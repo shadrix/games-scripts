@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         memefi
-// @version      1.0
+// @version      1.2
 // @namespace    Violentmonkey Scripts
 // @author       shadrix
 // @match        https://tg-app.memefi.club/*
@@ -10,22 +10,7 @@
 // @homepage     https://github.com/shadrix/games-scripts
 // ==/UserScript==
 // Function to navigate to the new URL if the current URL is not the target URL
-function navigateIfNotCurrentUrl() {
-    // Define the target URL
-    const targetUrl = "https://tg-app.memefi.club/";
 
-    // Read the current URL
-    const currentUrl = window.location.href;
-
-    // Check if the current URL is not the target URL
-    if (currentUrl === "https://tg-app.memefi.club/boosters") {
-        // Navigate to the target URL
-        window.location.href = targetUrl; // or you can use window.location.assign(targetUrl);
-    }
-}
-
-// Call the function to perform the navigation if needed
-navigateIfNotCurrentUrl();
 
 function clickElementBySelector(selector, callback) {
     var element = document.querySelector(selector);
@@ -42,7 +27,7 @@ function clickElementBySelector(selector, callback) {
     }
 }
 function performClickSequence(callback) {
-    clickElementBySelector("#root > main > div > div > div.MuiBox-root.css-1o9u4wi > div.MuiBox-root.css-qty7yh > div > button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeDecorativePrimary.MuiButton-containedSizeDecorativePrimary.MuiButton-colorPrimary.MuiButtonGroup-grouped.MuiButtonGroup-groupedHorizontal.MuiButtonGroup-groupedContained.MuiButtonGroup-groupedContainedHorizontal.MuiButtonGroup-groupedContainedPrimary.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeDecorativePrimary.MuiButton-containedSizeDecorativePrimary.MuiButton-colorPrimary.MuiButtonGroup-firstButton.css-rqshat", function() {
+    clickElementBySelector("#root > main > div > div > div.MuiBox-root.css-858c42 > div.MuiBox-root.css-qty7yh > div > button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeDecorativePrimary.MuiButton-containedSizeDecorativePrimary.MuiButton-colorPrimary.MuiButtonGroup-grouped.MuiButtonGroup-groupedHorizontal.MuiButtonGroup-groupedContained.MuiButtonGroup-groupedContainedHorizontal.MuiButtonGroup-groupedContainedPrimary.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeDecorativePrimary.MuiButton-containedSizeDecorativePrimary.MuiButton-colorPrimary.MuiButtonGroup-firstButton.css-wgpw47", function() {
 		    	setTimeout(function() {
 		        clickElementBySelector("#root > main > div > div > div.MuiBox-root.css-q4ok0g > div.MuiBox-root.css-rdor31 > div > div:nth-child(2)", function() {
 		           setTimeout(function() {
@@ -89,9 +74,7 @@ function startProcess() {
     setTimeout(function() {
         clickElementBySelector("body > div.MuiDrawer-root.MuiDrawer-modal.MuiModal-root.css-1muh5pq > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation16.MuiDrawer-paper.MuiDrawer-paperAnchorBottom.css-dsgero > div.MuiBox-root.css-1ljw0zu > button", function() {
         });
-		    clickElementBySelector("#root > main > div > div > div.MuiBox-root.css-1o9u4wi > div.MuiBox-root.css-qty7yh > div > button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeDecorativePrimary.MuiButton-containedSizeDecorativePrimary.MuiButton-colorPrimary.MuiButtonGroup-grouped.MuiButtonGroup-groupedHorizontal.MuiButtonGroup-groupedContained.MuiButtonGroup-groupedContainedHorizontal.MuiButtonGroup-groupedContainedPrimary.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeDecorativePrimary.MuiButton-containedSizeDecorativePrimary.MuiButton-colorPrimary.MuiButtonGroup-firstButton.css-rqshat", function() {
-		        executeSequenceWithRepetition();
-		    });
+		executeSequenceWithRepetition();
     }, 6500);
 }
 
