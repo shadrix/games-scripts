@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Bump
+// @name         openpad
 // @version      1.1
 // @namespace    Violentmonkey Scripts
 // @author       shadrix
