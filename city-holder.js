@@ -1,6 +1,6 @@
-/// ==UserScript==
+// ==UserScript==
 // @name         City holder
-// @version      1.2
+// @version      1.3
 // @namespace    Violentmonkey Scripts
 // @author       shadrix
 // @match        https://homyak.city-holder.com/*
