@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name         iceberg
+// @name         iceberg 2
 // @version      1.1
 // @namespace    Violentmonkey Scripts
 // @author       shadrix
 // @match        https://0xiceberg.store/*
 // @grant        none
-// @downloadURL  https://raw.githubusercontent.com/shadrix/games-scripts/main/iceberg.js
-// @updateURL    https://raw.githubusercontent.com/shadrix/games-scripts/main/iceberg.js
+// @downloadURL  https://raw.githubusercontent.com/shadrix/games-scripts/main/iceberg2.js
+// @updateURL    https://raw.githubusercontent.com/shadrix/games-scripts/main/iceberg2.js
 // @homepage     https://github.com/shadrix/games-scripts
 // ==/UserScript==
 
