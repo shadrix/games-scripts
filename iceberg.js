@@ -1,15 +1,14 @@
 // ==UserScript==
 // @name         iceberg
-// @version      1.0
+// @version      1.1
 // @namespace    Violentmonkey Scripts
 // @author       shadrix
-// @match        https://0xiceberg.store/*
+// @match        https://0xiceberg.com/*
 // @grant        none
 // @downloadURL  https://raw.githubusercontent.com/shadrix/games-scripts/main/iceberg.js
 // @updateURL    https://raw.githubusercontent.com/shadrix/games-scripts/main/iceberg.js
 // @homepage     https://github.com/shadrix/games-scripts
 // ==/UserScript==
-
 
 function clickElementBySelector(selector, callback) {
     var element = document.querySelector(selector);
