@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name         Bump
-// @version      1.1
+// @name         coincrypto
+// @version      1.2
 // @namespace    Violentmonkey Scripts
 // @author       shadrix
 // @match        https://play.coincrypto.gg/*
